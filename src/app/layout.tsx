@@ -6,8 +6,15 @@ import * as React from "react"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Next.js App",
-  description: "Created with modern Next.js",
+  title: "Razorheads - TIK POWER | Official Band Site",
+  description: "Home of Razorheads, creators of TIK POWER - the legendary song celebrating Timrå IK's qualification for Elitserien in 2000. Rock meets hockey in this historic tribute to TIK's achievement.",
+  keywords: ["razorheads", "TIK POWER", "Timrå IK", "hockey", "elitserien", "2000", "band", "music"],
+  openGraph: {
+    title: "Razorheads - TIK POWER | Official Band Site",
+    description: "Creators of TIK POWER - the legendary song celebrating Timrå IK's qualification for Elitserien in 2000.",
+    type: "website",
+    locale: "sv_SE",
+  },
 }
 
 export default function RootLayout({
