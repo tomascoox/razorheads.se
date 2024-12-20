@@ -41,10 +41,10 @@ export default function Home() {
 
         {/* Album Cover with 3D effect */}
         <div
-          className="group relative mx-auto mb-8 w-full md:mb-12"
+          className="group relative mx-auto mb-16 w-full md:mb-24"
           style={{
-            maxWidth: "min(300px, 45vw)",
-            perspective: "700px",
+            maxWidth: "min(400px, 55vw)",
+            perspective: "1000px",
             perspectiveOrigin: "50% 0%",
           }}
         >
@@ -54,15 +54,14 @@ export default function Home() {
               w-full 
               transform 
               transition-all
-              duration-500
+              duration-700
+              ease-in-out
               hover:scale-105
-              md:w-[300px]
+              md:w-[400px]
+              [transform-style:preserve-3d]
+              [transform:rotateX(55deg)_rotateY(-5deg)_rotateZ(-15deg)_translateZ(50px)]
+              hover:[transform:rotateX(0deg)_rotateY(0deg)_rotateZ(0deg)_translateZ(0px)]
             "
-            style={{
-              transformStyle: "preserve-3d",
-              transform:
-                "rotateX(55deg) rotateY(-5deg) rotateZ(-15deg) translateZ(50px) translateY(0px)",
-            }}
           >
             <div
               className="absolute inset-0 rounded-lg"
@@ -76,8 +75,8 @@ export default function Home() {
             <Image
               src="https://res.cloudinary.com/dj3cyyuz7/image/upload/v1734685679/TIK_POWER_album_cover_znk9eh.jpg"
               alt="TIK POWER Albumomslag"
-              width={400}
-              height={400}
+              width={500}
+              height={500}
               className="relative h-auto w-full rounded-lg"
               style={{
                 backfaceVisibility: "hidden",
