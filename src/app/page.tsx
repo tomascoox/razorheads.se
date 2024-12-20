@@ -149,7 +149,7 @@ export default function Home() {
           </h2>
           <div className="flex flex-col items-center justify-center gap-2">
             <span className="text-sm text-gray-300 md:text-base">
-              hans.antonsson [at] razorheads.se
+              hassebo@gmail.com
             </span>
             <span className="text-sm text-gray-300 md:text-base">
               tomas@joox.se
