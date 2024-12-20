@@ -152,7 +152,7 @@ export default function Home() {
               hans.antonsson [at] razorheads.se
             </span>
             <span className="text-sm text-gray-300 md:text-base">
-              tomas.coox [at] razorheads.se
+              tomas@joox.se
             </span>
           </div>
         </div>
@@ -286,7 +286,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <div className="font-medium">Webutveckling</div>
+                  <div className="font-medium">Webbutveckling</div>
                   <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
                     Tomas Coox
                   </div>
