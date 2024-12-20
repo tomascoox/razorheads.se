@@ -40,9 +40,16 @@ export default function Home() {
         <AlbumCover />
 
         {/* TIK POWER Headline */}
-        <h1 className="mb-8 text-5xl font-bold tracking-wider md:mb-12 md:text-6xl lg:text-7xl">
-          TIK POWER
-        </h1>
+        <div className="mb-8 md:mb-12">
+          <Image
+            src="https://res.cloudinary.com/dj3cyyuz7/image/upload/v1734729610/TIK_POWER_rnh7nd.png"
+            alt="TIK POWER"
+            width={600}
+            height={120}
+            className="w-full max-w-[600px] h-auto mx-auto"
+            priority
+          />
+        </div>
 
         {/* Text Content */}
         <div className="mb-16 space-y-6 px-4 font-medium md:space-y-8 md:px-8">
