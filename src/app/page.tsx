@@ -116,7 +116,7 @@ export default function Home() {
             <div>
               <div className="font-medium leading-normal">Tomas Coox</div>
               <div className="text-base font-medium leading-tight text-gray-400 md:text-lg md:leading-tight">
-                tomas@joox.se
+                info@joox.se
               </div>
             </div>
           </div>
