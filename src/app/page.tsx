@@ -26,17 +26,13 @@ export default function Home() {
       <div className="mx-auto my-8 w-full max-w-3xl text-center md:my-16">
         {/* Logo */}
         <div className="mb-14 flex justify-center md:mb-24">
-          <img
-            src="/razorheads-logo-white-outlines.svg"
+          <Image
+            src="https://res.cloudinary.com/dj3cyyuz7/image/upload/v1734717848/razorheads-logo-white_xepvsy.png"
             alt="Razorheads - Skaparna av TIK POWER"
-            width="570"
-            height="133"
-            style={{
-              width: "100%",
-              maxWidth: "570px",
-              height: "auto",
-            }}
-            className="px-6 md:px-0"
+            width={570}
+            height={133}
+            className="w-full max-w-[570px] h-auto px-6 md:px-0"
+            priority
           />
         </div>
 
@@ -49,7 +45,7 @@ export default function Home() {
         </h1>
 
         {/* Text Content */}
-        <div className="mb-16 space-y-6 px-4 font-light md:space-y-8 md:px-8">
+        <div className="mb-16 space-y-6 px-4 font-medium md:space-y-8 md:px-8">
           <div className="mx-auto max-w-[600px]">
             <p className="text-base leading-tight text-gray-300 md:text-lg md:leading-tight">
               För {yearsSince()} år sedan i februari 2000 skapade vi TIK POWER
@@ -82,11 +78,11 @@ export default function Home() {
         </div>
 
         {/* Band Members Image */}
-        <div className="mx-auto mb-24 mt-24 max-w-[500px] px-4">
+        <div className="mx-auto mb-24 mt-24 max-w-[600px] px-4">
           <Image
             src="https://res.cloudinary.com/dj3cyyuz7/image/upload/v1734703780/the_guys_fbbwx8.jpg"
             alt="Hans Antonsson och Tomas Coox"
-            width={500}
+            width={550}
             height={333}
             className="rounded-lg"
             priority
@@ -108,7 +104,7 @@ export default function Home() {
               hans.antonsson [at] razorheads.se
             </span>
             <span className="text-sm text-gray-300 md:text-base">
-              tomas.coox [at] razorheads.se
+              tomas [at] joox.se
             </span>
             <span className="text-sm text-gray-300 md:text-base">
               info [at] joox.se
@@ -122,36 +118,36 @@ export default function Home() {
             <h2 className="mb-6 text-2xl font-bold tracking-wide md:text-3xl">
               Låtar på skivan
             </h2>
-            <div className="space-y-6 font-light text-gray-300">
+            <div className="space-y-6 font-medium text-gray-300">
               <div className="space-y-4 text-base leading-tight md:text-lg md:leading-tight">
                 <div>
-                  <div className="font-medium">1. TIK POWER (4:07)</div>
-                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                  <div className="font-medium leading-normal">1. TIK POWER (4:07)</div>
+                  <div className="text-base font-medium leading-tight text-gray-400 md:text-lg md:leading-tight">
                     Hans Antonsson, Tomas Coox
                   </div>
                 </div>
 
                 <div>
-                  <div className="font-medium">
+                  <div className="font-medium leading-normal">
                     2. TIK POWER Redline Dance Project (4:13)
                   </div>
-                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                  <div className="text-base font-medium leading-tight text-gray-400 md:text-lg md:leading-tight">
                     Hans Antonsson, Tomas Coox
                   </div>
                 </div>
 
                 <div>
-                  <div className="font-medium">
+                  <div className="font-medium leading-normal">
                     3. TIK POWER Instrumental (4:07)
                   </div>
-                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                  <div className="text-base font-medium leading-tight text-gray-400 md:text-lg md:leading-tight">
                     Hans Antonsson, Tomas Coox
                   </div>
                 </div>
 
                 <div>
-                  <div className="font-medium">4. TIK Anthem (5:28)</div>
-                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                  <div className="font-medium leading-normal">4. TIK Anthem (5:28)</div>
+                  <div className="text-base font-medium leading-tight text-gray-400 md:text-lg md:leading-tight">
                     Tomas Coox, Hans Antonsson
                   </div>
                 </div>
@@ -180,7 +176,7 @@ export default function Home() {
             <h2 className="mb-6 text-2xl font-bold tracking-wide md:text-3xl">
               Medverkande
             </h2>
-            <div className="space-y-6 font-light text-gray-300">
+            <div className="space-y-6 font-medium text-gray-300">
               <div className="space-y-4 text-base leading-tight md:text-lg md:leading-tight">
                 <div>
                   <div className="font-medium">Producerad av Razorheads</div>
@@ -273,7 +269,7 @@ export default function Home() {
             <h2 className="mb-6 text-2xl font-bold tracking-wide md:text-3xl">
               Låttext
             </h2>
-            <div className="space-y-6 font-light text-gray-300">
+            <div className="space-y-6 font-medium text-gray-300">
               <div className="text-sm italic md:text-base">
                 (Hans Antonsson, Tomas Coox)
               </div>

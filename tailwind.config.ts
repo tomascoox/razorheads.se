@@ -66,10 +66,16 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "album-rotate": {
+          "0%": { transform: "rotateX(55deg) rotateY(-5deg) rotateZ(-15deg) translateZ(50px)" },
+          "50%": { transform: "rotateX(35deg) rotateY(5deg) rotateZ(-5deg) translateZ(30px)" },
+          "100%": { transform: "rotateX(55deg) rotateY(-5deg) rotateZ(-15deg) translateZ(50px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "album-rotate": "album-rotate 8s ease-in-out infinite",
       },
     },
   },

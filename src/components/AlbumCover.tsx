@@ -17,23 +17,11 @@ export default function AlbumCover() {
           relative 
           w-full 
           transform 
-          transition-all
-          duration-700
-          ease-in-out
-          hover:scale-105
+          animate-album-rotate
           md:w-[400px]
         "
         style={{
           transformStyle: "preserve-3d",
-          transform: "rotateX(55deg) rotateY(-5deg) rotateZ(-15deg) translateZ(50px)",
-        }}
-        onMouseEnter={(e) => {
-          const target = e.currentTarget;
-          target.style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(0px)";
-        }}
-        onMouseLeave={(e) => {
-          const target = e.currentTarget;
-          target.style.transform = "rotateX(55deg) rotateY(-5deg) rotateZ(-15deg) translateZ(50px)";
         }}
       >
         <div
