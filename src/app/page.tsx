@@ -25,15 +25,15 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center bg-black px-4 py-8 text-white md:py-12">
       <div className="mx-auto my-8 w-full max-w-3xl text-center md:my-16">
         {/* Logo */}
-        <div className="mb-16 flex justify-center md:mb-24">
+        <div className="mb-14 flex justify-center md:mb-24">
           <img
             src="/razorheads-logo-white-outlines.svg"
             alt="Razorheads - Skaparna av TIK POWER"
-            width="450"
+            width="570"
             height="133"
             style={{
               width: "100%",
-              maxWidth: "350px",
+              maxWidth: "570px",
               height: "auto",
             }}
             className="px-6 md:px-0"

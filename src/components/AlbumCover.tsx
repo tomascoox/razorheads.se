@@ -5,7 +5,7 @@ import Image from "next/image"
 export default function AlbumCover() {
   return (
     <div
-      className="group relative mx-auto mb-16 w-full md:mb-24"
+      className="group relative mx-auto mb-6 w-full md:mb-24"
       style={{
         maxWidth: "min(400px, 55vw)",
         perspective: "1000px",
