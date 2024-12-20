@@ -1,4 +1,5 @@
 import Image from "next/image"
+import AlbumCover from "@/components/AlbumCover"
 
 export default function Home() {
   // Calculate years since February 2000
@@ -40,51 +41,7 @@ export default function Home() {
         </div>
 
         {/* Album Cover with 3D effect */}
-        <div
-          className="group relative mx-auto mb-16 w-full md:mb-24"
-          style={{
-            maxWidth: "min(400px, 55vw)",
-            perspective: "1000px",
-            perspectiveOrigin: "50% 0%",
-          }}
-        >
-          <div
-            className="
-              relative 
-              w-full 
-              transform 
-              transition-all
-              duration-700
-              ease-in-out
-              hover:scale-105
-              md:w-[400px]
-              [transform-style:preserve-3d]
-              [transform:rotateX(55deg)_rotateY(-5deg)_rotateZ(-15deg)_translateZ(50px)]
-              hover:[transform:rotateX(0deg)_rotateY(0deg)_rotateZ(0deg)_translateZ(0px)]
-            "
-          >
-            <div
-              className="absolute inset-0 rounded-lg"
-              style={{
-                background:
-                  "radial-gradient(circle at center, rgba(255,255,255,0.2) 0%, transparent 80%)",
-                filter: "blur(15px)",
-                transform: "translateZ(-1px) scale(2)",
-              }}
-            />
-            <Image
-              src="https://res.cloudinary.com/dj3cyyuz7/image/upload/v1734685679/TIK_POWER_album_cover_znk9eh.jpg"
-              alt="TIK POWER Albumomslag"
-              width={500}
-              height={500}
-              className="relative h-auto w-full rounded-lg"
-              style={{
-                backfaceVisibility: "hidden",
-                boxShadow: "0 0 30px rgba(255,255,255,0.15)",
-              }}
-            />
-          </div>
-        </div>
+        <AlbumCover />
 
         {/* TIK POWER Headline */}
         <h1 className="mb-8 text-5xl font-bold tracking-wider md:mb-12 md:text-6xl lg:text-7xl">
@@ -148,13 +105,13 @@ export default function Home() {
           </h2>
           <div className="flex flex-col items-center justify-center gap-2">
             <span className="text-sm text-gray-300 md:text-base">
-              hassebo@gmail.com
+              hans.antonsson [at] razorheads.se
             </span>
             <span className="text-sm text-gray-300 md:text-base">
-              tomas@joox.se
+              tomas.coox [at] razorheads.se
             </span>
             <span className="text-sm text-gray-300 md:text-base">
-              info@joox.se
+              info [at] joox.se
             </span>
           </div>
         </div>
