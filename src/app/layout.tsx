@@ -1,9 +1,13 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Lato } from "next/font/google"
 import "./globals.css"
 import * as React from "react"
 
-const inter = Inter({ subsets: ["latin"] })
+const lato = Lato({ 
+  weight: ['300', '400', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "Razorheads - TIK POWER | Official Band Site",
@@ -35,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, padding: 0, backgroundColor: "black" }}>
+      <body className={lato.className} style={{ margin: 0, padding: 0, backgroundColor: "black" }}>
         {children}
       </body>
     </html>
