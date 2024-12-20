@@ -31,7 +31,7 @@ export default function Home() {
             alt="Razorheads - Skaparna av TIK POWER"
             width={570}
             height={133}
-            className="w-full max-w-[570px] h-auto px-6 md:px-0"
+            className="h-auto w-full max-w-[570px] px-6 md:px-0"
             priority
           />
         </div>
@@ -46,7 +46,7 @@ export default function Home() {
             alt="TIK POWER"
             width={600}
             height={120}
-            className="w-full max-w-[600px] h-auto mx-auto"
+            className="mx-auto h-auto w-full max-w-[600px]"
             priority
           />
         </div>
@@ -107,15 +107,18 @@ export default function Home() {
             Kontakta oss
           </h2>
           <div className="flex flex-col items-center justify-center gap-2">
-            <span className="text-sm text-gray-300 md:text-base">
-              hans.antonsson [at] razorheads.se
-            </span>
-            <span className="text-sm text-gray-300 md:text-base">
-              tomas [at] joox.se
-            </span>
-            <span className="text-sm text-gray-300 md:text-base">
-              info [at] joox.se
-            </span>
+            <div>
+              <div className="font-medium leading-normal">Hans Antonsson</div>
+              <div className="text-base font-medium leading-tight text-gray-400 md:text-lg md:leading-tight">
+                hassebo@gmail.com
+              </div>
+            </div>
+            <div>
+              <div className="font-medium leading-normal">Tomas Coox</div>
+              <div className="text-base font-medium leading-tight text-gray-400 md:text-lg md:leading-tight">
+                tomas@joox.se
+              </div>
+            </div>
           </div>
         </div>
 
@@ -128,7 +131,9 @@ export default function Home() {
             <div className="space-y-6 font-medium text-gray-300">
               <div className="space-y-4 text-base leading-tight md:text-lg md:leading-tight">
                 <div>
-                  <div className="font-medium leading-normal">1. TIK POWER (4:07)</div>
+                  <div className="font-medium leading-normal">
+                    1. TIK POWER (4:07)
+                  </div>
                   <div className="text-base font-medium leading-tight text-gray-400 md:text-lg md:leading-tight">
                     Hans Antonsson, Tomas Coox
                   </div>
@@ -153,7 +158,9 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <div className="font-medium leading-normal">4. TIK Anthem (5:28)</div>
+                  <div className="font-medium leading-normal">
+                    4. TIK Anthem (5:28)
+                  </div>
                   <div className="text-base font-medium leading-tight text-gray-400 md:text-lg md:leading-tight">
                     Tomas Coox, Hans Antonsson
                   </div>
