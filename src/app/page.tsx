@@ -1,6 +1,25 @@
 import Image from "next/image"
 
 export default function Home() {
+  // Calculate years since February 2000
+  const yearsSince = () => {
+    const today = new Date()
+    const releaseDate = new Date(2000, 1) // February is 1 (0-based months)
+
+    // Calculate years difference
+    let years = today.getFullYear() - releaseDate.getFullYear()
+
+    // If we haven't reached February yet in the current year, subtract one year
+    if (
+      today.getMonth() < 1 ||
+      (today.getMonth() === 1 && today.getDate() < releaseDate.getDate())
+    ) {
+      years--
+    }
+
+    return years
+  }
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-black px-4 py-8 text-white md:py-12">
       <div className="mx-auto my-8 w-full max-w-3xl text-center md:my-16">
@@ -8,12 +27,12 @@ export default function Home() {
         <div className="mb-16 flex justify-center md:mb-24">
           <img
             src="/razorheads-logo-white-outlines.svg"
-            alt="Razorheads - Creators of TIK POWER"
+            alt="Razorheads - Skaparna av TIK POWER"
             width="450"
             height="133"
             style={{
               width: "100%",
-              maxWidth: "450px",
+              maxWidth: "350px",
               height: "auto",
             }}
             className="px-6 md:px-0"
@@ -56,7 +75,7 @@ export default function Home() {
             />
             <Image
               src="https://res.cloudinary.com/dj3cyyuz7/image/upload/v1734685679/TIK_POWER_album_cover_znk9eh.jpg"
-              alt="TIK POWER Album Cover"
+              alt="TIK POWER Albumomslag"
               width={400}
               height={400}
               className="relative h-auto w-full rounded-lg"
@@ -69,54 +88,110 @@ export default function Home() {
         </div>
 
         {/* TIK POWER Headline */}
-        <h1 className="mb-8 text-4xl font-bold tracking-wider md:mb-12 md:text-5xl lg:text-6xl">
+        <h1 className="mb-8 text-5xl font-bold tracking-wider md:mb-12 md:text-6xl lg:text-7xl">
           TIK POWER
         </h1>
 
         {/* Text Content */}
         <div className="mb-16 space-y-6 px-4 font-light md:space-y-8 md:px-8">
           <div className="mx-auto max-w-[600px]">
-            <p className="text-base leading-relaxed text-gray-300 md:text-xl md:leading-snug lg:text-2xl">
-              In 2000, we created TIK POWER as a battle cry for Timrå IK in
-              their quest to reach Elitserien (now known as SHL). The song was
-              our way of channeling the passion and determination of the team
-              and their supporters during this historic journey.
+            <p className="text-base leading-tight text-gray-300 md:text-lg md:leading-tight">
+              För {yearsSince()} år sedan i februari 2000 skapade vi TIK POWER
+              som ett stridsrop för Timrå IK i deras kamp för att nå Elitserien
+              (numera SHL). Låten var vårt sätt att kanalisera passionen och
+              beslutsamheten hos laget och deras supportrar under denna
+              historiska resa.
             </p>
           </div>
 
           <div className="mx-auto max-w-[600px]">
-            <p className="text-base leading-relaxed text-gray-300 md:text-xl md:leading-snug lg:text-2xl">
-              TIK POWER became the anthem that embodied the fighting spirit of
-              Timrå IK during their push for promotion. We wanted to create
-              something that would energize both the players and fans, fueling
-              their drive towards the highest league in Swedish hockey.
+            <p className="text-base leading-tight text-gray-300 md:text-lg md:leading-tight">
+              TIK POWER blev hymnen som förkroppsligade Timrå IK:s kämparanda
+              under deras väg mot avancemang. Vi ville skapa något som skulle ge
+              energi åt både spelarna och fansen, och driva dem framåt mot den
+              högsta ligan i svensk hockey.
             </p>
           </div>
 
           <div className="mx-auto max-w-[500px] space-y-4">
             <div>
-              <p className="text-base leading-relaxed text-gray-300 md:text-xl md:leading-snug lg:text-2xl font-bold">
-                Keep rockin'
+              <p className="text-base font-bold leading-tight text-gray-300 md:text-lg md:leading-tight">
+                Rock on
               </p>
-              <p className="text-base leading-relaxed text-gray-300 md:text-xl md:leading-snug lg:text-2xl">
+              <p className="text-base leading-tight text-gray-300 md:text-lg md:leading-tight">
                 Hassebo & Tomas
               </p>
             </div>
-            
-            <div className="flex flex-col items-center justify-center space-y-2 pt-4 md:flex-row md:space-x-8 md:space-y-0">
-              <a
-                href="mailto:hans.antonsson@razorheads.se"
-                className="text-sm text-gray-300 transition-colors hover:text-white md:text-base"
-              >
-                hans.antonsson@razorheads.se
-              </a>
+          </div>
+        </div>
 
-              <a
-                href="mailto:tomas.coox@razorheads.se"
-                className="text-sm text-gray-300 transition-colors hover:text-white md:text-base"
-              >
-                tomas.coox@razorheads.se
-              </a>
+        {/* Band Members Image */}
+        <div className="mx-auto mb-24 mt-24 max-w-[500px] px-4">
+          <Image
+            src="https://res.cloudinary.com/dj3cyyuz7/image/upload/v1734703780/the_guys_fbbwx8.jpg"
+            alt="Hans Antonsson och Tomas Coox"
+            width={500}
+            height={333}
+            className="rounded-lg"
+            priority
+          />
+        </div>
+
+        {/* Contact Info */}
+        <div className="mx-auto mb-16 max-w-[500px] px-4">
+          <h2 className="mb-4 text-2xl font-bold tracking-wide md:text-3xl">
+            Kontakta oss
+          </h2>
+          <div className="flex flex-col items-center justify-center gap-2">
+            <span className="text-sm text-gray-300 md:text-base">
+              hans.antonsson [at] razorheads.se
+            </span>
+            <span className="text-sm text-gray-300 md:text-base">
+              tomas.coox [at] razorheads.se
+            </span>
+          </div>
+        </div>
+
+        {/* Songs Section */}
+        <div className="mx-auto mb-16 w-full max-w-[600px] px-4">
+          <div className="rounded-lg bg-black/50 p-8 text-center">
+            <h2 className="mb-6 text-2xl font-bold tracking-wide md:text-3xl">
+              Låtar på skivan
+            </h2>
+            <div className="space-y-6 font-light text-gray-300">
+              <div className="space-y-4 text-base leading-tight md:text-lg md:leading-tight">
+                <div>
+                  <div className="font-medium">1. TIK POWER (4:07)</div>
+                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                    Hans Antonsson, Tomas Coox
+                  </div>
+                </div>
+
+                <div>
+                  <div className="font-medium">
+                    2. TIK POWER Redline Dance Project (4:13)
+                  </div>
+                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                    Hans Antonsson, Tomas Coox
+                  </div>
+                </div>
+
+                <div>
+                  <div className="font-medium">
+                    3. TIK POWER Instrumental (4:07)
+                  </div>
+                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                    Hans Antonsson, Tomas Coox
+                  </div>
+                </div>
+
+                <div>
+                  <div className="font-medium">4. TIK Anthem (5:28)</div>
+                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                    Tomas Coox, Hans Antonsson
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -135,15 +210,110 @@ export default function Home() {
           ></iframe>
         </div>
 
-        {/* Lyrics Section */}
+        {/* Credits Section */}
         <div className="mx-auto w-full max-w-[600px] px-4">
           <div className="rounded-lg bg-black/50 p-8 text-center">
-            <h2 className="mb-6 text-2xl font-bold tracking-wide md:text-3xl">Lyrics</h2>
+            <h2 className="mb-6 text-2xl font-bold tracking-wide md:text-3xl">
+              Medverkande
+            </h2>
             <div className="space-y-6 font-light text-gray-300">
-              <div className="italic text-sm md:text-base">
+              <div className="space-y-4 text-base leading-tight md:text-lg md:leading-tight">
+                <div>
+                  <div className="font-medium">Producerad av Razorheads</div>
+                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                    Hans Antonsson, Tomas Coox
+                  </div>
+                </div>
+
+                <div>
+                  <div className="font-medium">Leadsång</div>
+                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                    Markus "Norton" Nordenberg
+                  </div>
+                </div>
+
+                <div>
+                  <div className="font-medium">Gitarrer</div>
+                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                    Hans Antonsson
+                  </div>
+                </div>
+
+                <div>
+                  <div className="font-medium">Keyboards & Synthar</div>
+                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                    Tomas Coox
+                  </div>
+                </div>
+
+                <div>
+                  <div className="font-medium">
+                    Hesaste hockeykörerna i Skandinavien
+                  </div>
+                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                    Hans Antonsson, Tomas Coox & Andreas Backlund
+                  </div>
+                </div>
+
+                <div>
+                  <div className="font-medium">
+                    Trummor...eh, ok...trumprogrammering då!
+                  </div>
+                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                    Björn "Hoven Droven" Höglund & Tomas Coox
+                  </div>
+                </div>
+
+                <div>
+                  <div className="font-medium">
+                    Inspelning, Mixning & Mastering
+                  </div>
+                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                    Tomas Coox
+                  </div>
+                </div>
+
+                <div>
+                  <div className="font-medium">Layout & Design av konvolut</div>
+                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                    Tomas Coox
+                  </div>
+                </div>
+
+                <div>
+                  <div className="font-medium">Webutveckling</div>
+                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                    Tomas Coox
+                  </div>
+                </div>
+
+                <div>
+                  <div className="font-medium">Foto</div>
+                  <div className="text-base leading-tight text-gray-400 md:text-lg md:leading-tight">
+                    Marcus Engström
+                  </div>
+                </div>
+
+                <div className="mt-8 text-base italic leading-tight text-gray-400 md:text-lg md:leading-tight">
+                  Inspelat på Studio Joox under ett antal vansinnigt roliga
+                  kvällar och dagar i februari år 2000.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Lyrics Section */}
+        <div className="mx-auto mt-16 w-full max-w-[600px] px-4">
+          <div className="rounded-lg bg-black/50 p-8 text-center">
+            <h2 className="mb-6 text-2xl font-bold tracking-wide md:text-3xl">
+              Låttext
+            </h2>
+            <div className="space-y-6 font-light text-gray-300">
+              <div className="text-sm italic md:text-base">
                 (Hans Antonsson, Tomas Coox)
               </div>
-              <div className="whitespace-pre-line text-base leading-tight md:leading-tight md:text-lg space-y-6">
+              <div className="space-y-6 whitespace-pre-line text-base leading-tight md:text-lg md:leading-tight">
                 <div className="space-y-1">
                   <div>örnen har landat med blicken på spänn</div>
                   <div>redo för den stora drabbningen</div>
