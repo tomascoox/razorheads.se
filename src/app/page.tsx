@@ -135,6 +135,11 @@ export default function Home() {
             className="rounded-lg"
             priority
           />
+          <div className="mt-2 grid grid-cols-3 text-center text-xs text-gray-400">
+            <div>Tomas Coox</div>
+            <div>Markus Nordenberg</div>
+            <div>Hans Antonsson</div>
+          </div>
         </div>
 
         {/* Contact Info */}
