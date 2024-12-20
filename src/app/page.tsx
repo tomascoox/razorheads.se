@@ -154,6 +154,9 @@ export default function Home() {
             <span className="text-sm text-gray-300 md:text-base">
               tomas@joox.se
             </span>
+            <span className="text-sm text-gray-300 md:text-base">
+              info@joox.se
+            </span>
           </div>
         </div>
 
