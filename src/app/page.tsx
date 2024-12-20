@@ -134,6 +134,67 @@ export default function Home() {
             loading="lazy"
           ></iframe>
         </div>
+
+        {/* Lyrics Section */}
+        <div className="mx-auto w-full max-w-[600px] px-4">
+          <div className="rounded-lg bg-black/50 p-8 text-center">
+            <h2 className="mb-6 text-2xl font-bold tracking-wide md:text-3xl">Lyrics</h2>
+            <div className="space-y-6 font-light text-gray-300">
+              <div className="italic text-sm md:text-base">
+                (Hans Antonsson, Tomas Coox)
+              </div>
+              <div className="whitespace-pre-line text-base leading-tight md:leading-tight md:text-lg space-y-6">
+                <div className="space-y-1">
+                  <div>örnen har landat med blicken på spänn</div>
+                  <div>redo för den stora drabbningen</div>
+                  <div>och på andra sidan där finns vårat mål</div>
+                </div>
+
+                <div className="space-y-1">
+                  <div>söker ett byte att sätta klorna i</div>
+                  <div>björn eller lokatt det skiter vi i</div>
+                  <div>för här finns en vilja utan stål</div>
+                </div>
+
+                <div className="space-y-1">
+                  <div>nu så står dom där på isen igen</div>
+                  <div>i den röda vita rustningen</div>
+                  <div>det finns inga hinder, det finns inga stopp</div>
+                  <div>Medelpad's stolthet, vi ger aldrig upp</div>
+                </div>
+
+                <div className="space-y-1">
+                  <div>Timrå å-å-å, vi ska strida, vi ska slåss</div>
+                  <div>Timrå å-å-å, ingenting kan stoppa oss</div>
+                </div>
+
+                <div className="space-y-1">
+                  <div>Timrå IK det är hockeykultur</div>
+                  <div>de rödvita ränderna går aldrig ur</div>
+                  <div>det ska ni få se när vi bekänner färg</div>
+                </div>
+
+                <div className="space-y-1">
+                  <div>våra fans finns från norr till söder</div>
+                  <div>alla bär på en stolthet som glöder</div>
+                  <div>och tillsammans så kan vi flytta berg</div>
+                </div>
+
+                <div className="space-y-1">
+                  <div>nu så står dom där på isen igen</div>
+                  <div>i den röda vita rustningen</div>
+                  <div>det finns inga hinder, det finns inga stopp</div>
+                  <div>Medelpad's stolthet, vi ger aldrig upp</div>
+                </div>
+
+                <div className="space-y-1">
+                  <div>Timrå å-å-å, vi ska strida, vi ska slåss</div>
+                  <div>Timrå å-å-å, ingenting kan stoppa oss</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   )
