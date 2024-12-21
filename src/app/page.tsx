@@ -42,7 +42,7 @@ export default function Home() {
         {/* TIK POWER Headline */}
         <div className="mb-8 md:mb-12">
           <Image
-            src="https://res.cloudinary.com/dj3cyyuz7/image/upload/v1734729610/TIK_POWER_rnh7nd.png"
+            src="https://res.cloudinary.com/dj3cyyuz7/image/upload/v1734775013/TIK_POWER_xac6hs.png"
             alt="TIK POWER"
             width={600}
             height={120}
