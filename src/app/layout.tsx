@@ -24,6 +24,16 @@ export const metadata: Metadata = {
     "music",
   ],
   metadataBase: new URL('https://razorheads.se'),
+  icons: {
+    icon: [
+      { url: "/razorheads-favicon.png" },
+      { url: "/razorheads-favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/razorheads-favicon.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/razorheads-favicon.png" },
+    ],
+  },
   openGraph: {
     title: "Razorheads - TIK POWER | Official Band Site",
     description:
