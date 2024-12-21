@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Lato } from "next/font/google"
 import "./globals.css"
 import * as React from "react"
+import Script from 'next/script'
 
 const lato = Lato({ 
   weight: ['300', '400', '700'],
@@ -66,8 +67,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="sv">
+      <head>
+        <link rel="icon" href="/razorheads-favicon.png" sizes="any" type="image/png" />
+      </head>
       <body className={lato.className} style={{ margin: 0, padding: 0, backgroundColor: "black" }}>
         {children}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-9F1XF0ZF0F"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-9F1XF0ZF0F');
+          `}
+        </Script>
       </body>
     </html>
   )
