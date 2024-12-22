@@ -54,7 +54,7 @@ export default function Home() {
         {/* Text Content */}
         <div className="mb-16 space-y-6 px-4 font-medium md:space-y-8 md:px-8">
           <div className="mx-auto max-w-[600px]">
-            <p className="text-base leading-tight text-gray-300 md:text-lg md:leading-tight">
+            <p className="text-base leading-tight text-gray-200 md:text-lg md:leading-tight">
               För {yearsSince()} år sedan i februari 2000 skapade vi TIK POWER
               som ett stridsrop för Timrå IK i deras kamp för att nå Elitserien
               (numera SHL). Låten var vårt sätt att kanalisera passionen och
@@ -64,7 +64,7 @@ export default function Home() {
           </div>
 
           <div className="mx-auto max-w-[600px]">
-            <p className="text-base leading-tight text-gray-300 md:text-lg md:leading-tight">
+            <p className="text-base leading-tight text-gray-200 md:text-lg md:leading-tight">
               TIK POWER blev hymnen som förkroppsligade Timrå IK:s kämparanda
               under deras väg mot avancemang. Vi ville skapa något som skulle ge
               energi åt både spelarna och fansen, och driva dem framåt mot den
@@ -74,10 +74,10 @@ export default function Home() {
 
           <div className="mx-auto max-w-[500px] space-y-4">
             <div>
-              <p className="text-base font-bold leading-tight text-gray-300 md:text-lg md:leading-tight">
+              <p className="text-base font-bold leading-tight text-gray-200 md:text-lg md:leading-tight">
                 Rock on
               </p>
-              <p className="text-base leading-tight text-gray-300 md:text-lg md:leading-tight">
+              <p className="text-base leading-tight text-gray-200 md:text-lg md:leading-tight">
                 Hassebo & Tomas
               </p>
             </div>
@@ -95,7 +95,7 @@ export default function Home() {
             priority
             quality={95}
           />
-          <div className="mt-2 grid grid-cols-3 text-center text-xs text-gray-400">
+          <div className="mt-2 grid grid-cols-3 text-center text-sm text-gray-200">
             <div>Tomas Coox</div>
             <div>Markus Nordenberg</div>
             <div>Hans Antonsson</div>

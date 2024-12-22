@@ -11,6 +11,16 @@ const lato = Lato({
   display: 'swap',
 })
 
+const csp = `
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com;
+  style-src 'self' 'unsafe-inline';
+  img-src 'self' https://res.cloudinary.com data: blob:;
+  font-src 'self' https://fonts.gstatic.com;
+  connect-src 'self' https://www.google-analytics.com;
+  frame-src 'self' https://open.spotify.com;
+`.replace(/\s+/g, ' ').trim()
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://razorheads.se'),
   title: "Razorheads - TIK POWER | Official Band Site",
@@ -73,9 +83,10 @@ export default function RootLayout({
     <html lang="sv">
       <head>
         <meta charSet="utf-8" />
+        <meta httpEquiv="Content-Security-Policy" content={csp} />
         <link rel="icon" href="/razorheads-favicon.png" sizes="any" type="image/png" />
       </head>
-      <body className={lato.className} style={{ margin: 0, padding: 0, backgroundColor: "black" }}>
+      <body className={`${lato.className} antialiased`} style={{ margin: 0, padding: 0, backgroundColor: "black" }}>
         <Snow />
         {children}
         <Script
