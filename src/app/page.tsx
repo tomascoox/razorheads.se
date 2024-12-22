@@ -110,13 +110,13 @@ export default function Home() {
             <div>
               <div className="font-medium leading-normal">Hans Antonsson</div>
               <div className="text-base font-medium leading-tight text-gray-400 md:text-lg md:leading-tight">
-                hassebo@gmail.com
+                hans.antonsson@razorheads.se
               </div>
             </div>
             <div>
               <div className="font-medium leading-normal">Tomas Coox</div>
               <div className="text-base font-medium leading-tight text-gray-400 md:text-lg md:leading-tight">
-                info@joox.se
+                tomas.coox@razorheads.se
               </div>
             </div>
             <div className="mt-6 flex items-center justify-center gap-4">
