@@ -1,5 +1,6 @@
 import Image from "next/image"
 import AlbumCover from "@/components/AlbumCover"
+import SpotifyPlayer from "@/components/SpotifyPlayer"
 
 export default function Home() {
   // Calculate years since February 2000
@@ -26,14 +27,18 @@ export default function Home() {
       <div className="mx-auto my-8 w-full max-w-3xl text-center md:my-16">
         {/* Logo */}
         <div className="mb-14 flex justify-center md:mb-24">
-          <Image
-            src="https://res.cloudinary.com/dj3cyyuz7/image/upload/v1734717848/razorheads-logo-white_xepvsy.png"
-            alt="Razorheads logotyp - Skaparna av TIK POWER"
-            width={570}
-            height={133}
-            className="h-auto w-full max-w-[570px] px-6 md:px-0"
-            priority
-          />
+          <div className="relative aspect-[570/133] w-full max-w-[570px] px-6 md:px-0">
+            <Image
+              src="https://res.cloudinary.com/dj3cyyuz7/image/upload/f_auto,q_auto,w_570/v1734717848/razorheads-logo-white_xepvsy.png"
+              alt="Razorheads logotyp - Skaparna av TIK POWER"
+              fill
+              className="object-contain"
+              priority
+              sizes="(max-width: 640px) 90vw, (max-width: 768px) 570px, 570px"
+              quality={90}
+              fetchPriority="high"
+            />
+          </div>
         </div>
 
         {/* Album Cover with 3D effect */}
@@ -41,14 +46,18 @@ export default function Home() {
 
         {/* TIK POWER Headline */}
         <div className="mb-8 md:mb-12">
-          <Image
-            src="https://res.cloudinary.com/dj3cyyuz7/image/upload/v1734775013/TIK_POWER_xac6hs.png"
-            alt="TIK POWER logotyp"
-            width={600}
-            height={120}
-            className="mx-auto h-auto w-full max-w-[600px]"
-            priority
-          />
+          <div className="relative mx-auto aspect-[600/120] w-full max-w-[600px]">
+            <Image
+              src="https://res.cloudinary.com/dj3cyyuz7/image/upload/f_auto,q_auto,w_600/v1734775013/TIK_POWER_xac6hs.png"
+              alt="TIK POWER logotyp"
+              fill
+              className="object-contain"
+              priority
+              sizes="(max-width: 640px) 90vw, (max-width: 768px) 600px, 600px"
+              quality={90}
+              fetchPriority="high"
+            />
+          </div>
         </div>
 
         {/* Text Content */}
@@ -86,15 +95,16 @@ export default function Home() {
 
         {/* Band Members Image */}
         <div className="mx-auto mb-24 mt-24 max-w-[600px] px-4">
-          <Image
-            src="https://res.cloudinary.com/dj3cyyuz7/image/upload/v1734703780/the_guys_fbbwx8.jpg"
-            alt="Razorheads bandmedlemmar: Tomas Coox, Markus Nordenberg och Hans Antonsson"
-            width={550}
-            height={333}
-            className="rounded-lg"
-            priority
-            quality={95}
-          />
+          <div className="relative aspect-[550/333] w-full">
+            <Image
+              src="https://res.cloudinary.com/dj3cyyuz7/image/upload/f_auto,q_auto,w_550/v1734703780/the_guys_fbbwx8.jpg"
+              alt="Razorheads bandmedlemmar: Tomas Coox, Markus Nordenberg och Hans Antonsson"
+              fill
+              className="rounded-lg object-cover"
+              loading="lazy"
+              sizes="(max-width: 768px) 90vw, 550px"
+            />
+          </div>
           <div className="mt-2 grid grid-cols-3 text-center text-sm text-gray-200">
             <div>Tomas Coox</div>
             <div>Markus Nordenberg</div>
@@ -217,18 +227,7 @@ export default function Home() {
         </div>
 
         {/* Spotify Player */}
-        <div className="mx-auto mb-16 w-full max-w-3xl px-4">
-          <iframe
-            style={{ borderRadius: "12px" }}
-            src="https://open.spotify.com/embed/artist/14lY9QyGnlZnGcHypqx0D6?utm_source=generator&theme=0"
-            width="100%"
-            height="352"
-            frameBorder="0"
-            allowFullScreen
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          ></iframe>
-        </div>
+        <SpotifyPlayer />
 
         {/* Credits Section */}
         <div className="mx-auto w-full max-w-[600px] px-4">

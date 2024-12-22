@@ -9,22 +9,17 @@ const lato = Lato({
   weight: ['300', '400', '700'],
   subsets: ['latin'],
   display: 'swap',
+  preload: true,
+  adjustFontFallback: true,
+  variable: '--font-lato',
 })
-
-const csp = `
-  default-src 'self';
-  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com;
-  style-src 'self' 'unsafe-inline';
-  img-src 'self' https://res.cloudinary.com data: blob:;
-  font-src 'self' https://fonts.gstatic.com;
-  connect-src 'self' https://www.google-analytics.com;
-  frame-src 'self' https://open.spotify.com;
-`.replace(/\s+/g, ' ').trim()
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
+  themeColor: '#000000',
+  colorScheme: 'dark',
 }
 
 export const metadata: Metadata = {
@@ -81,13 +76,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="sv">
-      <head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="Content-Security-Policy" content={csp} />
-        <link rel="icon" href="/razorheads-favicon.png" sizes="any" type="image/png" />
-      </head>
-      <body className={`${lato.className} antialiased`} style={{ margin: 0, padding: 0, backgroundColor: "black" }}>
+    <html lang="sv" className="scroll-smooth">
+      <body 
+        className={`${lato.className} ${lato.variable} antialiased`} 
+        style={{ 
+          margin: 0, 
+          padding: 0, 
+          backgroundColor: "black",
+          textRendering: 'optimizeLegibility',
+        }}
+      >
         <Snow />
         {children}
         <Script
@@ -97,10 +95,11 @@ export default function RootLayout({
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            function gtag(){window.dataLayer.push(arguments);}
             gtag('js', new Date());
-
-            gtag('config', 'G-9F1XF0ZF0F');
+            gtag('config', 'G-9F1XF0ZF0F', {
+              page_path: window.location.pathname,
+            });
           `}
         </Script>
       </body>
