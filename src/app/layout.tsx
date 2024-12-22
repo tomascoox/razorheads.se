@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Lato } from "next/font/google"
 import "./globals.css"
 import * as React from "react"
@@ -21,15 +21,16 @@ const csp = `
   frame-src 'self' https://open.spotify.com;
 `.replace(/\s+/g, ' ').trim()
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://razorheads.se'),
   title: "Razorheads - TIK POWER | Official Band Site",
   description: "Home of Razorheads, creators of TIK POWER - the legendary song celebrating Timrå IK's qualification for Elitserien in 2000. Rock meets hockey in this historic tribute to TIK's achievement.",
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-  },
   keywords: [
     "razorheads",
     "TIK POWER",
