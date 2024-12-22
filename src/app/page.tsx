@@ -28,7 +28,7 @@ export default function Home() {
         <div className="mb-14 flex justify-center md:mb-24">
           <Image
             src="https://res.cloudinary.com/dj3cyyuz7/image/upload/v1734717848/razorheads-logo-white_xepvsy.png"
-            alt="Razorheads - Skaparna av TIK POWER"
+            alt="Razorheads logotyp - Skaparna av TIK POWER"
             width={570}
             height={133}
             className="h-auto w-full max-w-[570px] px-6 md:px-0"
@@ -43,7 +43,7 @@ export default function Home() {
         <div className="mb-8 md:mb-12">
           <Image
             src="https://res.cloudinary.com/dj3cyyuz7/image/upload/v1734775013/TIK_POWER_xac6hs.png"
-            alt="TIK POWER"
+            alt="TIK POWER logotyp"
             width={600}
             height={120}
             className="mx-auto h-auto w-full max-w-[600px]"
@@ -88,11 +88,12 @@ export default function Home() {
         <div className="mx-auto mb-24 mt-24 max-w-[600px] px-4">
           <Image
             src="https://res.cloudinary.com/dj3cyyuz7/image/upload/v1734703780/the_guys_fbbwx8.jpg"
-            alt="Hans Antonsson och Tomas Coox"
+            alt="Razorheads bandmedlemmar: Tomas Coox, Markus Nordenberg och Hans Antonsson"
             width={550}
             height={333}
             className="rounded-lg"
             priority
+            quality={95}
           />
           <div className="mt-2 grid grid-cols-3 text-center text-xs text-gray-400">
             <div>Tomas Coox</div>

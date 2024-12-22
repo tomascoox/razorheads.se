@@ -12,9 +12,14 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://razorheads.se'),
   title: "Razorheads - TIK POWER | Official Band Site",
-  description:
-    "Home of Razorheads, creators of TIK POWER - the legendary song celebrating Timrå IK's qualification for Elitserien in 2000. Rock meets hockey in this historic tribute to TIK's achievement.",
+  description: "Home of Razorheads, creators of TIK POWER - the legendary song celebrating Timrå IK's qualification for Elitserien in 2000. Rock meets hockey in this historic tribute to TIK's achievement.",
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
   keywords: [
     "razorheads",
     "TIK POWER",
@@ -25,7 +30,6 @@ export const metadata: Metadata = {
     "band",
     "music",
   ],
-  metadataBase: new URL('https://razorheads.se'),
   icons: {
     icon: [
       { url: "/razorheads-favicon.png" },
@@ -38,8 +42,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Razorheads - TIK POWER | Official Band Site",
-    description:
-      "Creators of TIK POWER - the legendary song celebrating Timrå IK's qualification for Elitserien in 2000.",
+    description: "Creators of TIK POWER - the legendary song celebrating Timrå IK's qualification for Elitserien in 2000.",
     type: "website",
     locale: "sv_SE",
     url: "https://razorheads.se",
@@ -69,6 +72,7 @@ export default function RootLayout({
   return (
     <html lang="sv">
       <head>
+        <meta charSet="utf-8" />
         <link rel="icon" href="/razorheads-favicon.png" sizes="any" type="image/png" />
       </head>
       <body className={lato.className} style={{ margin: 0, padding: 0, backgroundColor: "black" }}>

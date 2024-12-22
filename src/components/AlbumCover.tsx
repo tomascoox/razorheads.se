@@ -35,10 +35,12 @@ export default function AlbumCover() {
         />
         <Image
           src="https://res.cloudinary.com/dj3cyyuz7/image/upload/v1734685679/TIK_POWER_album_cover_znk9eh.jpg"
-          alt="TIK POWER Albumomslag"
+          alt="TIK POWER Albumomslag - Razorheads"
           width={500}
           height={500}
           className="relative h-auto w-full rounded-lg"
+          priority
+          quality={95}
           style={{
             backfaceVisibility: "hidden",
             boxShadow: "0 0 30px rgba(255,255,255,0.15)",
