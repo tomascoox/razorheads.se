@@ -3,6 +3,7 @@ import { Lato } from "next/font/google"
 import "./globals.css"
 import * as React from "react"
 import Script from 'next/script'
+import Snow from "@/components/Snow"
 
 const lato = Lato({ 
   weight: ['300', '400', '700'],
@@ -71,6 +72,7 @@ export default function RootLayout({
         <link rel="icon" href="/razorheads-favicon.png" sizes="any" type="image/png" />
       </head>
       <body className={lato.className} style={{ margin: 0, padding: 0, backgroundColor: "black" }}>
+        <Snow />
         {children}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-9F1XF0ZF0F"
