@@ -29,13 +29,13 @@ export default function Home() {
         <div className="mb-14 flex justify-center md:mb-24">
           <div className="relative aspect-[570/133] w-full max-w-[570px] px-6 md:px-0">
             <Image
-              src="https://res.cloudinary.com/dj3cyyuz7/image/upload/f_auto,q_auto,w_570/v1734717848/razorheads-logo-white_xepvsy.png"
+              src="https://res.cloudinary.com/dj3cyyuz7/image/upload/f_auto,q_auto,w_400/v1734717848/razorheads-logo-white_xepvsy.png"
               alt="Razorheads logotyp - Skaparna av TIK POWER"
               fill
               className="object-contain"
               priority
-              sizes="(max-width: 640px) 90vw, (max-width: 768px) 570px, 570px"
-              quality={90}
+              sizes="(max-width: 640px) 85vw, (max-width: 768px) 570px, 570px"
+              quality={85}
               fetchPriority="high"
             />
           </div>
@@ -48,13 +48,13 @@ export default function Home() {
         <div className="mb-8 md:mb-12">
           <div className="relative mx-auto aspect-[600/120] w-full max-w-[600px]">
             <Image
-              src="https://res.cloudinary.com/dj3cyyuz7/image/upload/f_auto,q_auto,w_600/v1734775013/TIK_POWER_xac6hs.png"
+              src="https://res.cloudinary.com/dj3cyyuz7/image/upload/f_auto,q_auto,w_400/v1734775013/TIK_POWER_xac6hs.png"
               alt="TIK POWER logotyp"
               fill
               className="object-contain"
               priority
-              sizes="(max-width: 640px) 90vw, (max-width: 768px) 600px, 600px"
-              quality={90}
+              sizes="(max-width: 640px) 85vw, (max-width: 768px) 600px, 600px"
+              quality={85}
               fetchPriority="high"
             />
           </div>
@@ -93,16 +93,17 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Band Members Image */}
+        {/* Band Members Image - Optimize for mobile */}
         <div className="mx-auto mb-24 mt-24 max-w-[600px] px-4">
           <div className="relative aspect-[550/333] w-full">
             <Image
-              src="https://res.cloudinary.com/dj3cyyuz7/image/upload/f_auto,q_auto,w_550/v1734703780/the_guys_fbbwx8.jpg"
+              src="https://res.cloudinary.com/dj3cyyuz7/image/upload/f_auto,q_auto,w_400/v1734703780/the_guys_fbbwx8.jpg"
               alt="Razorheads bandmedlemmar: Tomas Coox, Markus Nordenberg och Hans Antonsson"
               fill
               className="rounded-lg object-cover"
               loading="lazy"
-              sizes="(max-width: 768px) 90vw, 550px"
+              sizes="(max-width: 640px) 85vw, (max-width: 768px) 550px, 550px"
+              quality={85}
             />
           </div>
           <div className="mt-2 grid grid-cols-3 text-center text-sm text-gray-200">

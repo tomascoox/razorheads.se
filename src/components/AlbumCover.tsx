@@ -36,13 +36,13 @@ export default function AlbumCover() {
         />
         <div className="relative aspect-square w-full">
           <Image
-            src="https://res.cloudinary.com/dj3cyyuz7/image/upload/f_auto,q_auto,w_500/v1734685679/TIK_POWER_album_cover_znk9eh.jpg"
+            src="https://res.cloudinary.com/dj3cyyuz7/image/upload/f_auto,q_auto,w_400/v1734685679/TIK_POWER_album_cover_znk9eh.jpg"
             alt="TIK POWER Albumomslag - Razorheads"
             fill
             className="rounded-lg object-cover"
             priority
-            sizes="(max-width: 640px) 90vw, (max-width: 768px) 400px, 400px"
-            quality={90}
+            sizes="(max-width: 640px) 85vw, 400px"
+            quality={85}
             fetchPriority="high"
             style={{
               backfaceVisibility: "hidden",

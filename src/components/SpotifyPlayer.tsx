@@ -23,7 +23,17 @@ const SpotifyIframe = dynamic(() => Promise.resolve(({ isVisible }: { isVisible:
     title="Razorheads på Spotify"
     className="transition-opacity duration-300"
   />
-)), { ssr: false })
+)), { 
+  ssr: false,
+  loading: () => (
+    <div 
+      className="absolute inset-0 flex items-center justify-center rounded-lg bg-black/50"
+      aria-label="Laddar Spotify-spelare..."
+    >
+      <div className="h-8 w-8 animate-spin rounded-full border-2 border-white border-t-transparent" />
+    </div>
+  )
+})
 
 export default function SpotifyPlayer() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -38,8 +48,11 @@ export default function SpotifyPlayer() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
-          observer.disconnect()
+          // Add a small delay to prioritize other content
+          setTimeout(() => {
+            setIsVisible(true)
+            observer.disconnect()
+          }, 1000)
         }
       },
       { threshold: 0.1 }
