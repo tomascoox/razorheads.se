@@ -19,12 +19,17 @@
     "@types/react-dom": "^18.2.19",
     "autoprefixer": "^10.4.23",
     "eslint": "^8.56.0",
-    "eslint-config-next": "14.1.0",
+    "eslint-config-next": "^14.2.35",
     "postcss": "^8.5.6",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "@next/eslint-plugin-next": {
+      "glob": "^10.5.0"
+    }
   }
 }
