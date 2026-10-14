@@ -30,7 +30,7 @@ jobs:
       - name: Dependabot metadata
         id: meta
         if: github.event_name == 'pull_request'
-        uses: dependabot/fetch-metadata@v2
+        uses: dependabot/fetch-metadata@v3
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
       - name: Approve commit for auto-merge
